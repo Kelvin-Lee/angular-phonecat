@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp">
+<html lang="en" ng-app="poopapp"> <!-- This name must match the "parent" module name -->
   <head>
     <meta charset="utf-8">
     <title>Google Phone Gallery</title>
@@ -8,12 +8,18 @@
     <script src="lib/angular/angular.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-controller="PhoneListController">
+  <body ng-controller="PhoneListController"> <!-- This controller name must match exactly with the declaration in app.js. No special camel-casing is applied to match i.e. phoneListController will not match-->
 
     <ul>
       <li ng-repeat="phone in phones">
         <span>{{phone.name}}</span>
         <p>{{phone.snippet}}</p>
+      </li>
+    </ul>
+
+    <ul>
+      <li ng-repeat="fruit in fruits">
+        <span style="color: {{fruit.color}}">{{fruit.name}}</span>
       </li>
     </ul>
 
