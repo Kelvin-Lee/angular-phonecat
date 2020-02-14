@@ -18,5 +18,13 @@ angular.
           snippet: 'The Next, Next Generation tablet.'
         }
       ];
+      this.vegetables = [
+          {name: 'asparagus', color: 'green'},
+          {name: 'baby spinach', color: 'green'},
+          {name: 'corn', color: 'yellow'},
+          {name: 'daikon', color: 'white'},
+          {name: 'endive', color: 'green'},
+          {name: 'fennel', color: 'green'}
+      ];
     }
   });
