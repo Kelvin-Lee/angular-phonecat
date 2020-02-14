@@ -7,6 +7,8 @@
 <ul class="phone-thumbs">
   <li ng-repeat="img in $ctrl.phone.images">
     <img ng-src="{{img}}" ng-click="$ctrl.setImage(img)" />
+    <img ... ng-dblclick="$ctrl.onDblclick(img)" />
+    <!--<img ng-src="{{img}}" ng-blur="$ctrl.setImage(img)" />--> <!-- Hmmm -->
   </li>
 </ul>
 
