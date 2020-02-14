@@ -25,6 +25,22 @@
             class="thumbnail phone-list-item">
           <a href="#!/phones/{{phone.id}}" class="thumb">
             <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
+            <!--
+
+                "Replace the ngSrc directive with a plain old src attribute. Using tools 
+                 such as your browser's developer tools or inspecting the web server access 
+                 logs, confirm that the application is indeed making an extraneous request  
+                 to %7B%7Bphone.imageUrl%7D%7D (or {{phone.imageUrl}}).
+
+                 The issue here is that the browser will fire a request for that invalid 
+                 image address as soon as it hits the <img> tag, which is before AngularJS 
+                 has a chance to evaluate the expression and inject the valid address."
+
+                                                                      - Tutorial 
+
+                 I.e. i think the html is read in order first, and _then_ Angular does its thing.
+                 The timing here goes into the nitty gritty of web-page loading, me thinks.
+            -->
           </a>
           <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
           <p>{{phone.snippet}}</p>
