@@ -23,6 +23,28 @@
       <ul class="phones">
         <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp" class="thumbnail">
           <a href="#!/phones/{{phone.id}}" class="thumb">
+
+          <!-- 
+              "You may have noticed, that ÎíÎñ while the configured route paths start 
+               with / (e.g. /phones) ÎíÎñ the URLs used in templates start with 
+               #!/ (e.g. #!/phones).
+          
+               Without getting into much detail, AngularJS (by default) uses the hash 
+               part of the URL (i.e. what comes after the hash (#) symbol) to 
+               determine the current route. In addition to that, you can also specify 
+               a hash-prefix (! by default) that needs to appear after the hash symbol 
+               in order for AngularJS to consider the value an "AngularJS path" and 
+               process it (for example, try to match it to a route).
+          
+               You can find out more about how all this works in the Using $location 
+               section of the Developer Guide. But all you need to know for now, is 
+               that the URLs to our various routes should be prefixed with #!."
+
+                - Tutorial
+
+               Uh huh...
+          -->
+
             <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
           </a>
           <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
