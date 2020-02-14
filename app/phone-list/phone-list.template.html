@@ -9,10 +9,12 @@
       </p>
 
       <p>
-        Sort by:
+        Sort by: <span>{{$ctrl.orderProp}}</span> <!-- Okaaaay -->
         <select ng-model="$ctrl.orderProp">
           <option value="name">Alphabetical</option>
+          <option value="-name">Reverse Alphabetical</option> <!-- Oh this negative sign is v. nice -->
           <option value="age">Newest</option>
+          <option value="-age">Oldest</option> <!-- Oh this negative sign is v. nice -->
         </select>
       </p>
 

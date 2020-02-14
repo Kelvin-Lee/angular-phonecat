@@ -22,6 +22,11 @@ angular.
         }
       ];
 
+      /* 
+          Interesting. If instantiation is commented out, there will a blank option 
+          in the <select> element, as forewarned by the tutorial. Hmmm... An 
+          Angular side-affect? HMMM.
+      */
       this.orderProp = 'age';
     }
   });
