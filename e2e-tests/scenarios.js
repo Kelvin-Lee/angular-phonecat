@@ -77,6 +77,19 @@ describe('PhoneCat Application', function() {
       expect(element(by.binding('$ctrl.phone.name')).getText()).toBe('Nexus S');
     });
 
+
+    /*
+        Stuff you need to know to run tests is outlined on the tutorial page:
+        https://docs.angularjs.org/tutorial/. E.g. updating stuff, updating dependencies,
+        making sure to run the app in a separate CLI in order to run the tests in a different
+        CLI, etc....
+    */
+    it('should show 4 images', function(){
+
+        /* NOICE */
+        expect(element.all(by.repeater('img in $ctrl.phone.images')).count()).toBe(4)
+    });
+
   });
 
 });
