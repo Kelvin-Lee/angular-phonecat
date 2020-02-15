@@ -8,3 +8,7 @@ angular.module('phonecatApp', [
   'phoneDetail',
   'phoneList'
 ]);
+
+/*
+    It seems I have broken my dev environment somehow. Phooey.
+*/
